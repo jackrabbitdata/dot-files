@@ -25,6 +25,7 @@ map <leader><SPACE> :FZF<CR>
 imap jj <esc>V<CR>
 imap kk <esc>
 
+imap ff <C-y>,
 
 "" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
