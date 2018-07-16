@@ -1,6 +1,6 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
-colorscheme industry
+colorscheme desert
 set number relativenumber
 set tabstop=4
 set expandtab
@@ -25,7 +25,7 @@ map <leader><SPACE> :FZF<CR>
 imap jj <esc>V<CR>
 imap kk <esc>
 
-imap ff <C-y>,
+imap ;; <C-y>,
 
 "" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
