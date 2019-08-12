@@ -9,6 +9,13 @@ set shiftwidth=4
 set path=$PWD/**              " set vim's path to working directory so :find will work on anything below
 set rtp+=~/.fzf               " enable fzf fuzzy completion in vim
 
+" enable undo file
+if !isdirectory($HOME."/.vim/undo-dir")
+    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+set undodir=~/.vim/undo-dir
+set undofile
+
 "--------------Mappings----------------"
 map <SPACE> <leader>
 
@@ -16,14 +23,21 @@ map <leader>sv :source ~/.vimrc<CR>
 map <leader>ev :tabedit ~/.vimrc<CR>
 map <leader>S :setlocal spell! spelllang=en_us<CR>
 
-map <leader>n :set number! relativenumber!<CR>
+map <leader>n :e %:h/
 
 map <leader>b :buffers<CR>:buffer<Space>
+map <leader>l :buffer#<CR>
 
 map <leader><SPACE> :FZF<CR>
 
+map <leader>w :w<CR>
+map <leader>q :q<CR>
+
 imap jj <esc>V<CR>
 imap kk <esc>
+imap hh ['']<esc>hi
+imap ff ->
+imap gg $this->
 
 imap ;; <C-y>,
 
@@ -40,7 +54,7 @@ Plugin 'tpope/vim-repeat.git'
 Plugin 'tpope/vim-surround' 
 Plugin 'vim-airline/vim-airline'
 Plugin 'joonty/vdebug'
-
+Bundle 'stephpy/vim-php-cs-fixer'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -66,3 +80,4 @@ filetype plugin indent on    " required
 "   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 "   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 " augroup END
+let g:php_cs_fixer_rules = "@PSR2"
