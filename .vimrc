@@ -10,11 +10,11 @@ set path=$PWD/**              " set vim's path to working directory so :find wil
 set rtp+=~/.fzf               " enable fzf fuzzy completion in vim
 
 " enable undo file
-if !isdirectory($HOME."/.vim/undo-dir")
-    call mkdir($HOME."/.vim/undo-dir", "", 0700)
-endif
-set undodir=~/.vim/undo-dir
-set undofile
+"if !isdirectory($HOME."/.vim/undo-dir")
+"    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+"endif
+"set undodir=~/.vim/undo-dir
+"set undofile
 
 "--------------Mappings----------------"
 map <SPACE> <leader>
