@@ -101,7 +101,7 @@ alias ...='cd ../../'
 alias ....='cd ../../../'
 
 # Tmux alias
-alias tm='tmux attach || tmux new'
+alias tm='tmux new-session -A -s main'
 
 # Change to root and fuzzy search change directory
 alias sr='cd /; `__fzf_cd__`'
