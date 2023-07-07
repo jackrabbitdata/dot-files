@@ -103,6 +103,9 @@ alias ....='cd ../../../'
 # Tmux alias
 alias tm='tmux new-session -A -s main'
 
+# Source fzf key bindings
+. /usr/share/doc/fzf/examples/key-bindings.bash
+
 # Change to root and fuzzy search change directory
 alias sr='cd /; `__fzf_cd__`'
 
@@ -130,8 +133,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 parse_git_branch() {
          git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
