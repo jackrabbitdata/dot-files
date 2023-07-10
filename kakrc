@@ -26,6 +26,7 @@ map global user 9 ':add-highlighter window/number-lines number-lines -relative<r
 map global user 0 ':remove-highlighter window/number-lines<ret>' -docstring 'Remove line numbers'
 map global user b ':b<space>' -docstring 'Buffers'
 map global user d ':delete-buffer' -docstring 'Delete Buffer'
+map global user e '! emmet ' -docstring 'Emmet'
 map global user f ':find<space>' -docstring 'Fuzzy find and Edit'
 map global user i '<a-i>' -docstring 'Select inner object <a-i>'
 map global user k ':e ~/.config/kak/kakrc<ret>' -docstring 'Edit kakrc'
